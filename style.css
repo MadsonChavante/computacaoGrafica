@@ -1,0 +1,149 @@
+canvas{ 
+	border:1px solid black;
+}
+.b{
+	margin-top: 2px;
+	margin-left: 5px;
+	border:0px solid black;
+}
+.input{
+	margin:-10px; 
+	margin-right: 5px;
+    width: 100px;
+}
+button{
+    width: 50px;
+    height: 20px;
+}
+button:hover{top:-4px;box-shadow:0 4px 3px #999}
+
+.div-canvas{
+	display: flex;
+  	justify-content: center;
+}
+.axis-grade{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: #f1f1f1;  
+}
+.axis-grade>div{
+    display: flex;
+    justify-content: center;
+    
+}
+.axis>input{
+    margin-left: 10px;
+}
+#myBtnAxis{
+    margin-left: 15px;
+}
+
+.div-cor{
+	border:2px solid #e1e1e1;
+	background-color: #000;
+	width: 20px;
+	height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.div-cor:hover{top:-4px;box-shadow:0 4px 3px #999}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+
+}
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+}
+
+.modal-body{
+	display: flex;
+	justify-content: center;
+}
+.modal-body > div{
+	border: 4px solid #e1e1e1;
+	margin: 15px;
+	width: 50px;
+	height: 50px;
+}
+.div-black{
+	background-color: #000;
+}
+.div-green{
+	background-color: #008000;
+}
+.div-blue{
+	background-color: #0000ff;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.modal-body {padding: 2px 16px;}
+.fg-contaier{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #c1c1c1;
+}
+.fg-contaier>div{
+    background-color: #a1a1a1;
+    margin:30px;
+    width: 90px;
+    height: 120px;
+    padding: 20px;
+
+    display: flex;
+    justify-content: column;
+    align-items: center;
+
+}
+.div-cor-figuras{
+    border:2px solid #e1e1e1;
+    background-color: #000;
+    width: 20px;
+    height: 20px;
+    margin-left: 30px;
+    margin-top: 10px; 
+}
+.div-cor-figuras:hover{top:-4px;box-shadow:0 4px 3px #444}
+.b-fg{
+    margin-left: 15px;
+    margin-top: 10px;
+}

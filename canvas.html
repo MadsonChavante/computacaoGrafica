@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="style.css ">    
+</head>
+<body>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+       <div class="modal-body">
+           <span class="close" onclick="fecharModal(document.querySelector('#myModal'))">&times;</span>
+           <div id="div-black" title="#000" class="div-black" style="background-color: #000" onclick="mudarCor(this,document.querySelector('#myModal'))">
+           </div>
+           <div id="div-green" title="#008000" class="div-green" style="background-color: #008000" onclick="mudarCor(this,document.querySelector('#myModal'))"></div>
+           <div id="div-blue" title="#0000ff" class="div-blue" style="background-color: #0000ff" onclick="mudarCor(this,document.querySelector('#myModal'))"></div>
+       </div>
+    </div>
+</div>
+
+
+
+  <div class="corpo">
+     <div class="div-canvas">
+      <canvas id ="cgcanvas" width="800" height="600" onmousedown="mDown(this,event)" onmouseup="mUp(this,event)" >canvas 5</canvas>
+  </div>
+  <div class="controle">
+   <div class="axis-grade">
+     <div class="class-grade">
+         <input type="range" class="input" min="0" max="20" step="4" value="8" name="tamanho axis" id="tamnho-Control-grade">
+         <div title="#000"  class="div-cor" id="myBtnGrade" onclick="mostrarModal(document.querySelector('#myModal'),this)"></div>  
+         <button id="grade" class="b" onclick="grade()">Grade</button>
+     </div>
+     <div class="axis">
+   
+         <button class="b" name="button" onclick="axis()">Axis</button>
+         <div title="#000"  class="div-cor" id="myBtnAxis" onclick="mostrarModal(document.querySelector('#myModal'),this)"></div>
+         <input type="range" class="input" min="0" max="14" step="2" value="6" name="tamanho axis" id="tamnhoControl">
+
+     </div>
+</div>
+
+<div class="fg-contaier">
+
+ <div class="lv">
+
+   <div class="linhaVertical">
+        <p style="margin-top: -5px">Linha Vertical</p>
+        <input type="text"  class="input" value="" placeholder="Posi. x" id="Control-linha-x" >
+        <input type="text"  class="input" value="" placeholder="Posi. y" id="Control-linha-y" >
+
+        <input type="text"  class="input" value="" placeholder="tamnho da linha " id="tamnho-Control-linha-vertical" >
+        <div title="#000"  class="div-cor-figuras" id="myBtnLinhaVertical" onclick="mostrarModal(document.querySelector('#myModal'),this)"></div>
+     
+        <button class="b-fg" name="button" onclick="linhaVertical(parseInt(document.querySelector('#Control-linha-x').value),parseInt(document.querySelector('#Control-linha-y').value),parseInt(document.querySelector('#tamnho-Control-linha-vertical').value),document.querySelector('#myBtnLinhaVertical').title)">linha</button>
+    </div>
+  </div>
+
+   <div class="lh">
+
+       <div class="linhaHorizontal">
+             <p style="margin-top: -5px">Linha Hori</p>
+             <input type="text"  class="input" value="" placeholder="Posi. x" id="Control-linha-h-x" >
+             <input type="text"  class="input" value="" placeholder="Posi. y" id="Control-linha-h-y" >
+
+             <input type="text"  class="input" value="" placeholder="tamnho da linha " id="tamnho-Control-linha-horizontal" >
+             <div title="#000"  class="div-cor-figuras" id="myBtnLinhaHorizontal" onclick="mostrarModal(document.querySelector('#myModal'),this)"></div>
+
+           <button class="b-fg" name="button" onclick="linhaHorizontal(parseInt(document.querySelector('#Control-linha-h-x').value),parseInt(document.querySelector('#Control-linha-h-y').value),parseInt(document.querySelector('#tamnho-Control-linha-horizontal').value),document.querySelector('#myBtnLinhaHorizontal').title)">linha</button>
+        </div>
+  </div>
+
+  <div class="l45">
+
+       <div class="linha45">
+             <p style="margin-top: -5px">Linha 45</p>
+             <input type="text"  class="input" value="" placeholder="Posi. x" id="Control-linha-45-x" >
+             <input type="text"  class="input" value="" placeholder="Posi. y" id="Control-linha-45-y" >
+
+             <input type="text"  class="input" value="" placeholder="tamnho da linha " id="tamnho-Control-linha-45" >
+             <div title="#000"  class="div-cor-figuras" id="myBtnLinha45" onclick="mostrarModal(document.querySelector('#myModal'),this)"></div>
+
+           <button class="b-fg" name="button" onclick="linha45(parseInt(document.querySelector('#Control-linha-45-x').value),parseInt(document.querySelector('#Control-linha-45-y').value),parseInt(document.querySelector('#tamnho-Control-linha-45').value),document.querySelector('#myBtnLinha45').title)">linha</button>
+        </div>
+  </div>
+
+  <div class="figuras">
+
+       <div class="figuras">
+             <div>
+               <button  title="1" name="linha" onclick="selecionar(this.title,this)">linha</button>
+             </div>
+             <div>
+               <button  title="2" name="quadrado" onclick="selecionar(this.title,this)">quadr</button>
+             </div>
+             <div>
+               <button  title="3" name="retangulo" onclick="selecionar(this.title,this)">retan</button>
+             </div>
+             <div>
+               <button  title="4" name="triangulo" onclick="selecionar(this.title,this)">trian</button>
+             </div>
+             <div title="#000"  class="div-cor-figuras" id="myBtnfiguras" onclick="mostrarModal(document.querySelector('#myModal'),this)"></div>
+        </div>
+  </div>
+
+
+</div>
+
+</div>
+</div>
+<script src="jquery.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+
+
+
